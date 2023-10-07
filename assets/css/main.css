@@ -15,7 +15,6 @@ html, body {
 
 body {
     font-family: 'Roboto', sans-serif !important;
-    background: #006B68;
     background: url('../images/background.png') right;
     background-size: cover !important;
     color: white;
@@ -23,4 +22,16 @@ body {
 
 #chat-alert {
     display: none;
+}
+
+#chat-container {
+
+}
+
+#chat-header {
+    background: #006B6880;
+}
+
+#chat-logo {
+    height: 80px;
 }
