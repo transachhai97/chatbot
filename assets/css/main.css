@@ -1,3 +1,26 @@
+::-webkit-scrollbar {
+    width: 0;
+}
+
+* {
+    scrollbar-width: none !important;
+}
+
+html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+    background: #006B68;
+    background: url('../images/background.png') right;
+    background-size: cover !important;
+    color: white;
+}
+
 #chat-alert {
     display: none;
 }
