@@ -1,4 +1,6 @@
 $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+
     detectIncognito().then((result) => {
         console.log("------>bidv: browser: ", result.browserName, result.isPrivate);
         if (result.isPrivate) {

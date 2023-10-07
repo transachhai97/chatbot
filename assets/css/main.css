@@ -1,9 +1,17 @@
 ::-webkit-scrollbar {
-    width: 0;
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FFC62F;
 }
 
 * {
-    scrollbar-width: none !important;
+    scrollbar-width: thin !important;
 }
 
 html, body {
@@ -29,9 +37,76 @@ body {
 }
 
 #chat-header {
-    background: #006B6880;
+    background: #005452;
+}
+
+#chat-sidebar {
 }
 
 #chat-logo {
     height: 80px;
+}
+
+#chat-left {
+    background: #006B6880;
+}
+
+#chat-recent {
+    height: 50px;
+}
+
+.chat-recent--item {
+    border: 2px solid white;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+#chat-list {
+    height: calc(100vh - 220px);
+    border-top: 1px solid #ccc;
+}
+
+.chat-item {
+    border-left: 5px solid transparent;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.chat-item.active {
+    border-left: 5px solid #FFC62F;
+    background: #005452;
+}
+
+.chat-item:hover {
+    background: #005452;
+}
+
+.chat-item--logo {
+    width: 40px;
+    height: 40px;
+}
+
+#chat-content {
+    display: none;
+}
+
+#chat-title {
+    height: 80px;
+}
+
+#chat-box {
+    height: calc(100vh - 80px);
+}
+
+#chat-icon {
+    border: 2px solid white;
+    width: 50px;
+    height: 50px;
+}
+
+#chat-back {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
 }
