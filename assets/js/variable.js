@@ -1,5 +1,5 @@
 // Số lượng bot hiển thị gần đây
-const recentLength = 3;
+const recentLength = 2;
 
 const keyRecent = 'arrRecent';
 const keyCurrent = 'currentId';
@@ -22,48 +22,6 @@ const botList = [
         type: 'public',
         botId: '8f7e0d766ab7df1188a36e71bdcc9faf',
         botName: '[UAT-C] BIDV -ver2',
-        logo: '',
-    },
-    {
-        type: 'private',
-        botId: '1',
-        botName: '1',
-        logo: '',
-    },
-    {
-        type: 'public',
-        botId: '2',
-        botName: '2',
-        logo: '',
-    },
-    {
-        type: 'public',
-        botId: '3',
-        botName: '3',
-        logo: '',
-    },
-    {
-        type: 'public',
-        botId: '4',
-        botName: '4',
-        logo: '',
-    },
-    {
-        type: 'public',
-        botId: '5',
-        botName: '5',
-        logo: '',
-    },
-    {
-        type: 'public',
-        botId: '6',
-        botName: '6',
-        logo: '',
-    },
-    {
-        type: 'public',
-        botId: '7',
-        botName: '7',
         logo: '',
     },
 ];
