@@ -1,13 +1,25 @@
 function resetPage() {
+    window.location.hash = '';
     localStorage.clear();
     location.reload();
 }
 
 $(document).ready(function () {
-    localStorage.removeItem(keyCurrent);
     console.log("------>bidv: convertBotList: ", convertBotList);
     convertBotList.forEach(renderBotList);
     renderRecent();
+
+    if (window.location.hash) {
+        let arrHash = window.location.hash.substring(1).split("-");
+        let indexKey = convertBotList.findIndex((item) => item.type == arrHash[0] && item.botId == arrHash[1]);
+        if (indexKey != -1) {
+            setTimeout(() => {
+                clickBotItem(indexKey);
+            }, 500);
+        }
+    } else {
+        localStorage.removeItem(keyCurrent);
+    }
 });
 
 $(function () {
@@ -83,6 +95,8 @@ function clickBotItem(index) {
     localStorage.setItem(keyRecent, JSON.stringify(arrRecent.slice(0, recentLength)));
 
     renderRecent();
+
+    window.location.hash = '#' + item.type + '-' + item.botId;
 }
 
 function renderRecent() {
@@ -123,4 +137,6 @@ function closeChat() {
     $('#chat-content').hide(500);
     $('.chat-item').removeClass('active');
     $('.chat-recent--item').removeClass('active');
+
+    window.location.hash = '';
 }
