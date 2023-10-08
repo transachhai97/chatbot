@@ -4,8 +4,10 @@ function resetPage() {
 }
 
 $(document).ready(function () {
+    localStorage.removeItem(keyCurrent);
     console.log("------>bidv: convertBotList: ", convertBotList);
     convertBotList.forEach(renderBotList);
+    renderRecent();
 });
 
 $(function () {
@@ -41,6 +43,8 @@ function clickBotItem(index) {
     $('#chat-content').hide();
     $('.chat-item').removeClass('active');
 
+    $('#chat-recent--item-' + index).tooltip('hide');
+
     $('#bot-' + index).addClass('active');
 
     let url = '';
@@ -75,4 +79,38 @@ function clickBotItem(index) {
     localStorage.setItem(keyCurrent, index);
 
     localStorage.setItem(keyRecent, JSON.stringify(arrRecent.slice(0, recentLength)));
+
+    renderRecent();
+}
+
+function renderRecent() {
+    let elmHtml = '';
+    let arrRecent = JSON.parse(localStorage.getItem(keyRecent)) || [];
+    console.log("------>bidv: arrRecent: ", arrRecent);
+
+    convertBotList.forEach((item, index) => {
+        console.log(item, index);
+        let classText = '';
+
+        if (arrRecent.includes(index.toString())) {
+            if (localStorage.getItem(keyCurrent) == index) {
+                classText = 'active';
+            }
+            elmHtml += '<img id="chat-recent--item-' + index + '" class="p-2 m-1 rounded rounded-circle chat-recent--item ' + classText +
+                '"title="' + item.botName +
+                '"data-toggle="tooltip" data-placement="top" src="' + item.logo + '" onclick="clickBotItem(`' + index + '`)" ' +
+                'onmousemove="hoverItem(`' + index + '`)"/>';
+        }
+    });
+
+    if (!elmHtml) {
+        elmHtml = '<p class="flex-fill my-1 text-truncate text-center text-info">Không có dữ liệu</p>';
+    }
+
+    $('#chat-recent').html(elmHtml);
+}
+
+
+function hoverItem(index) {
+    $('#chat-recent--item-' + index).tooltip('show');
 }
