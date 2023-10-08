@@ -19,7 +19,9 @@
     <div class="row">
         <div id="chat-sidebar" class="col-sm-4 p-0">
             <div id="chat-header" class="d-flex align-items-center justify-content-center">
-                <img id="chat-logo" src="./assets/images/logo.png" alt="logo" onclick="resetPage()">
+                <img id="chat-logo" src="./assets/images/logo.png" alt="logo" data-toggle="tooltip"
+                     title="Tải lại trang"
+                     onclick="resetPage()">
             </div>
             <div id="chat-left">
                 <h5 id="chat-recent--title" class="mb-0 p-1 ps-2">Gần đây</h5>
@@ -36,7 +38,8 @@
             <div id="chat-title" class="d-flex align-items-center justify-content-between gap-2 px-2">
                 <img id="chat-icon" src="about:blank" alt="" class="p-1 m-1 rounded rounded-circle"/>
                 <h5 id="chat-name" class="flex-fill my-2 text-truncate"></h5>
-                <img id="chat-close" src="./assets/images/close.png" alt="close" onclick="closeChat()"/>
+                <img id="chat-close" src="./assets/images/close.png" alt="close" data-toggle="tooltip" title="Close"
+                     onclick="closeChat()"/>
             </div>
             <iframe id="chat-box" frameborder="0" width="100%" height="100%"
                     src="about:blank"></iframe>
