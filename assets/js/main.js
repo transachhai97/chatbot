@@ -40,6 +40,8 @@ function renderBotList(item, index) {
 function clickBotItem(index) {
     let item = convertBotList[index];
 
+    $('#chat-sidebar').toggleClass('d-none d-sm-block');
+
     $('#chat-content').hide();
     $('.chat-item').removeClass('active');
 
@@ -117,7 +119,7 @@ function hoverItem(index) {
 }
 
 function closeChat() {
-    localStorage.removeItem(keyCurrent);
+    $('#chat-sidebar').toggleClass('d-none d-sm-block');
     $('#chat-content').hide(500);
     $('.chat-item').removeClass('active');
     $('.chat-recent--item').removeClass('active');

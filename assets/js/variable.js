@@ -1,5 +1,5 @@
 // Số lượng bot hiển thị gần đây
-const recentLength = 2;
+const recentLength = 3;
 
 const keyRecent = 'arrRecent';
 const keyCurrent = 'currentId';
@@ -16,12 +16,54 @@ const botList = [
         type: 'private',
         botId: '8883508d6f0b9256e6c347f49e7728f9',
         botName: '[UAT] BIDV',
-        logo: '',
+        logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTDD58eFF89850pQGWd97QLOiAhJw2aaaSKMP-_r48&s',
     },
     {
         type: 'public',
         botId: '8f7e0d766ab7df1188a36e71bdcc9faf',
         botName: '[UAT-C] BIDV -ver2',
+        logo: '',
+    },
+    {
+        type: 'private',
+        botId: '1',
+        botName: '1',
+        logo: '',
+    },
+    {
+        type: 'public',
+        botId: '2',
+        botName: '2',
+        logo: '',
+    },
+    {
+        type: 'public',
+        botId: '3',
+        botName: '3',
+        logo: '',
+    },
+    {
+        type: 'public',
+        botId: '4',
+        botName: '4',
+        logo: '',
+    },
+    {
+        type: 'public',
+        botId: '5',
+        botName: '5',
+        logo: '',
+    },
+    {
+        type: 'public',
+        botId: '6',
+        botName: '6',
+        logo: '',
+    },
+    {
+        type: 'public',
+        botId: '7',
+        botName: '7',
         logo: '',
     },
 ];
