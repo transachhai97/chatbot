@@ -16,6 +16,8 @@ $(document).ready(function () {
             setTimeout(() => {
                 clickBotItem(indexKey);
             }, 500);
+        } else {
+            window.location.hash = '';
         }
     } else {
         localStorage.removeItem(keyCurrent);
